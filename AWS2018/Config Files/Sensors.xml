@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sensors>
+  <Sensor>
+    <Name>온도</Name>
+    <Maximum>60</Maximum>
+    <Minimum>-50</Minimum>
+    <Unit>°C</Unit>
+    <Position>0</Position>
+    <isUseMaximum>false</isUseMaximum>
+    <isUseMinimum>false</isUseMinimum>
+  </Sensor>
+  <Sensor>
+    <Name>풍향</Name>
+    <Maximum>360</Maximum>
+    <Minimum>0</Minimum>
+    <Unit>deg</Unit>
+    <Position>1</Position>
+    <isUseMaximum>false</isUseMaximum>
+    <isUseMinimum>false</isUseMinimum>
+</Sensor>
+  <Sensor>
+    <Name>풍속</Name>
+    <Maximum>360</Maximum>
+    <Minimum>0</Minimum>
+    <Unit>deg</Unit>
+    <Position>2</Position>
+    <isUseMaximum>false</isUseMaximum>
+    <isUseMinimum>false</isUseMinimum>
+  </Sensor>
+</Sensors>
