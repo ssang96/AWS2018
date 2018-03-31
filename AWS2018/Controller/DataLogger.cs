@@ -1,6 +1,6 @@
 ﻿using AWS2018.Utilities.AWSConfig;
 
-namespace CommManager.DataLogger
+namespace AWS2018.Controller
 {
     public class DataLogger
     {      

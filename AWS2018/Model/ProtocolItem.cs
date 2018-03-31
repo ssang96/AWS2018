@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommManager.Datas
+namespace AWS2018.Datas
 {
     /// <summary> Check Function Delegate </summary>
     public delegate bool CheckFunction(object sender, CircleQueue<byte> m_Queue);

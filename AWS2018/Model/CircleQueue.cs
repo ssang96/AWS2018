@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommManager.Datas
+﻿namespace AWS2018.Datas
 {
     /// <summary>
     /// CQueue에 대한 요약 설명입니다.

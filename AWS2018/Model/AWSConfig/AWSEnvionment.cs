@@ -22,5 +22,11 @@
 
         //PROTOCOL
         public string Protocol { get; set; }
+
+        //daily file save directory
+        public string DailyDataDirectory { get; set; }
+
+        //monthly file save directory
+        public string MonthlyDataDirectory { get; set; }
     }
 }

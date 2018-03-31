@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 
-namespace CommManager
+namespace AWS2018
 {
     static class Program
     {

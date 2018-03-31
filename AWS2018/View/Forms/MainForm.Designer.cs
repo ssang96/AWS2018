@@ -1,4 +1,4 @@
-﻿namespace CommManager
+﻿namespace AWS2018
 {
     partial class MainForm
     {
@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -42,6 +41,8 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.textDisplayItem = new DevExpress.XtraBars.BarButtonItem();
+            this.widgetDisplayItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,10 +51,11 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barStaticItem1,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.textDisplayItem,
+            this.widgetDisplayItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 5;
+            this.ribbonControl1.MaxItemId = 8;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonHome,
@@ -61,11 +63,6 @@
             this.ribbonPage3,
             this.ribbonPage4});
             this.ribbonControl1.Size = new System.Drawing.Size(1189, 150);
-            // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Id = 3;
-            this.barStaticItem1.Name = "barStaticItem1";
             // 
             // barButtonItem1
             // 
@@ -84,8 +81,10 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barStaticItem1);
+            this.ribbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup1.ImageOptions.Image")));
+            this.ribbonPageGroup1.ImageOptions.ImageUri.Uri = "Add";
+            this.ribbonPageGroup1.ItemLinks.Add(this.textDisplayItem);
+            this.ribbonPageGroup1.ItemLinks.Add(this.widgetDisplayItem);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonPage2
@@ -128,6 +127,23 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2016 Colorful";
             // 
+            // textDisplayItem
+            // 
+            this.textDisplayItem.Caption = "Text Display";
+            this.textDisplayItem.Id = 5;
+            this.textDisplayItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.textDisplayItem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.textDisplayItem.Name = "textDisplayItem";
+            this.textDisplayItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.textDisplayItem_ItemClick);
+            // 
+            // widgetDisplayItem
+            // 
+            this.widgetDisplayItem.Caption = "Widget Display";
+            this.widgetDisplayItem.Id = 6;
+            this.widgetDisplayItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("widgetDisplayItem.ImageOptions.Image")));
+            this.widgetDisplayItem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("widgetDisplayItem.ImageOptions.LargeImage")));
+            this.widgetDisplayItem.Name = "widgetDisplayItem";
+            // 
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -136,6 +152,7 @@
             this.ClientSize = new System.Drawing.Size(1189, 667);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -159,8 +176,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem textDisplayItem;
+        private DevExpress.XtraBars.BarButtonItem widgetDisplayItem;
     }
 }
 

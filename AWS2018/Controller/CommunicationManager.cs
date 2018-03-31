@@ -1,13 +1,7 @@
-﻿using AWS2018.Utilities.AWSConfig;
-using CommManager.Utilities.AWSConfig;
-using CommManager.Utilities.SensorConfig;
-using System;
+﻿using AWS2018.Utilities.SensorConfig;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CommManager.DataLogger
+namespace AWS2018.Controller
 {
     public class CommunicationManager
     {

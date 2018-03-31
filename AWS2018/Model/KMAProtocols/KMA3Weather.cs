@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommManager.Datas.KMAProtocols
+namespace AWS2018.Datas.KMAProtocols
 {
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
-    class KMA3Weather
+    public class KMA3Weather
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
         public byte[] Header;				// 	0xFF, 0xFF

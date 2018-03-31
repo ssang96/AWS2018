@@ -1,4 +1,5 @@
-﻿using CommManager.DataLogger;
+﻿using AWS2018.Controller;
+using AWS2018.View.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CommManager
+namespace AWS2018
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -17,8 +18,16 @@ namespace CommManager
         public MainForm()
         {
             InitializeComponent();
+             
+            comManager = new CommunicationManager();
+        }
 
-             comManager = new CommunicationManager();
+        private void textDisplayItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GraphForm graph = new GraphForm();
+            graph.MdiParent = this;
+
+            graph.Show();
         }
     }
 }

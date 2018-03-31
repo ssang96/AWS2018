@@ -37,16 +37,17 @@ namespace AWS2018.Utilities
             Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
             hierarchy.Configured = true;
 
-            RollingFileAppender rollingAppender = new RollingFileAppender();
-            rollingAppender.Name = "logger";
-            rollingAppender.File = FilePath; // 로그 파일 이름
-            rollingAppender.AppendToFile = true;
-
-            rollingAppender.StaticLogFileName = true;
-            rollingAppender.CountDirection = 1;
-            rollingAppender.RollingStyle = RollingFileAppender.RollingMode.Date;
-            rollingAppender.LockingModel = new FileAppender.MinimalLock();
-            rollingAppender.DatePattern = "_yyyyMMdd\".log\""; // 날짜가 변경되면 이전 로그에 붙은 이름
+            RollingFileAppender rollingAppender = new RollingFileAppender
+            {
+                Name = "logger",
+                File = FilePath, // 로그 파일 이름
+                AppendToFile = true,
+                StaticLogFileName = true,
+                CountDirection = 1,
+                RollingStyle = RollingFileAppender.RollingMode.Date,
+                LockingModel = new FileAppender.MinimalLock(),
+                DatePattern = "_yyyyMMdd\".log\"" // 날짜가 변경되면 이전 로그에 붙은 이름
+            };
 
             PatternLayout layout = new PatternLayout("%date [%-5level] %message%newline");//로그 출력 포맷
 

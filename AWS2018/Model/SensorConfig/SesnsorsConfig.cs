@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace CommManager.Utilities.SensorConfig
+namespace AWS2018.Utilities.SensorConfig
 {
     public class SesnsorsConfig
     {

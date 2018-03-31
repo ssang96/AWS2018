@@ -3,7 +3,7 @@ using AWS2018.Utilities.AWSConfig;
 using System;
 using System.IO;
 
-namespace CommManager.Utilities.AWSConfig
+namespace AWS2018.Utilities.AWSConfig
 {
     class AWSConfig
     {

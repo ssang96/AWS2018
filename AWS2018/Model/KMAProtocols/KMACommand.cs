@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommManager.Datas.KMAProtocols
+namespace AWS2018.Datas.KMAProtocols
 {
     class KMACommand
     {

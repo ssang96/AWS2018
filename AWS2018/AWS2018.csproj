@@ -245,9 +245,15 @@
   <ItemGroup>
     <Compile Include="Controller\DataLogger.cs" />
     <Compile Include="Controller\CommunicationManager.cs" />
-    <Compile Include="Model\Access\AccessDBManager.cs" />
-    <Compile Include="Model\Access\ConnectionString.cs" />
-    <Compile Include="Model\Access\IDatabaseAccess.cs" />
+    <Compile Include="Controller\ReportViewController.cs" />
+    <Compile Include="Controller\ViewInterface\ICommand.cs" />
+    <Compile Include="Controller\ViewInterface\IDataLoggerList.cs" />
+    <Compile Include="Controller\ViewInterface\IDisplay.cs" />
+    <Compile Include="Controller\ViewInterface\IGraphView.cs" />
+    <Compile Include="Controller\ViewInterface\ILastDataCall.cs" />
+    <Compile Include="Controller\ViewInterface\IMainStatus.cs" />
+    <Compile Include="Controller\ViewInterface\IReportView.cs" />
+    <Compile Include="Model\Access\AccessFileInfo.cs" />
     <Compile Include="Model\Access\SqlTemplate.cs" />
     <Compile Include="Model\CircleQueue.cs" />
     <Compile Include="Model\Datas\WeatherContext.cs" />
@@ -260,6 +266,12 @@
     <Compile Include="Model\Datas\WeatherDailyModel.cs" />
     <Compile Include="Utilities\L4Logger.cs" />
     <Compile Include="Utilities\Result.cs" />
+    <Compile Include="View\Forms\GraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\GraphForm.Designer.cs">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +291,9 @@
     <Compile Include="View\UserControl\GraphControl.Designer.cs">
       <DependentUpon>GraphControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Forms\GraphForm.resx">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +312,7 @@
       <DependentUpon>GraphControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -328,6 +344,7 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

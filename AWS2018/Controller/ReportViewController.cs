@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AWS2018.Model.Access
+namespace AWS2018.Controller
 {
-    public class ConnectionString
+    public class ReportViewController
     {
-       
     }
 }
